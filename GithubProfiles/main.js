@@ -3,7 +3,7 @@ const main = document.getElementById('main');
 const form = document.getElementById('form');  
 const search = document.getElementById('search');
 
-getUser("Prasanna525");
+//getUser('Prasanna525');
 
 async function getUser(username){
     const response = await fetch(API_URL + username);
@@ -12,7 +12,23 @@ async function getUser(username){
     getRepos(username);
 }
 
+async function getRepos(username){
+    const resp = await fetch(API_URL + username + "/repos");
+    const respData = await resp.json();
+    addReposToCard(respData);
+}
 
+function addReposToCard(repos){
+    const reposEl = document.getElementById("repos");
+    repos.forEach(repo => {
+        const repoEl = document.createElement("a");
+        repoEl.classList.add("repo");
+        repoEl.href = repo.html_url;
+        repoEl.target = "_blank";
+        repoEl.innerText = repo.name;
+        reposEl.appendChild(repoEl);
+    })
+}
 
 function createUserCard(user){
     const cardHTML = `
@@ -33,3 +49,12 @@ function createUserCard(user){
     `
     main.innerHTML = cardHTML;
 }
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    const user = search.value;
+    if(user){
+        getUser(user);
+        search.value= "";
+    }
+})
