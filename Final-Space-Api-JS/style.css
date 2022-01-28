@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Roboto+Slab:wght@400;600;800&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle, rgb(60, 60, 180), rgb(5, 5, 50));
+    font-family: 'Karla', sans-serif;
+}
+
+.logo{
+    text-align: center;
+}
+
+.logo img{
+    width: 400px;
+}
+
+#character_container{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-card{
+    margin: 10px;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(195, 203, 233);
+    border-radius: 20px;
+    display: flex;
+    font-size: small;
+}
+
+.img-container img{
+    border-radius: 20px;
+    width: 150px;
+    height: 160px;
+    margin: 20px;   
+}
+
+.info{
+    padding: 20px 20px 20px 0;
+    line-height: 1.2em;
+    justify-self: center;
+    align-self: center;
+}
