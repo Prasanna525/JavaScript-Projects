@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: url('./images/wallpaper-mania.com_High_resolution_wallpaper_background_ID_77700298970.jpg');
+    size: 100vh;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.logo img{
+    width: 500px;
+}
+
+.logo {
+   text-align: center;
+}
+
+.gap{
+    height: 300px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(35, 31, 32);
+    font-size: 20px;   
+    color: rgb(64, 78, 65); 
+    font-weight: 800;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover{
+    color:blanchedalmond;
+    cursor: pointer;
+}
+
+button:active{
+    transform: translateY(10px);
+}
